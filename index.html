@@ -20,35 +20,38 @@
         body {
             background: #fff;
             font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
-            padding-bottom: 90px;
+            padding-bottom: calc(80px + env(safe-area-inset-bottom));
+            -webkit-text-size-adjust: 100%;
         }
 
+        /* 画像：スマホでは画面幅100%、タブレット以上は中央寄せ */
         .lp-image {
             display: block;
             width: 100%;
-            max-width: 768px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
         /* 画像下CTA */
         .cta-section {
-            padding: 28px 16px 20px;
+            padding: 24px 16px 20px;
             text-align: center;
             background: #fff8f0;
         }
 
         .cta-btn {
-            display: inline-block;
-            width: 100%;
+            display: block;
+            width: 92%;
             max-width: 440px;
-            padding: 22px 24px;
+            margin: 0 auto;
+            padding: 20px 16px;
             background: #06C755;
             color: #fff;
-            font-size: 20px;
+            font-size: clamp(16px, 4.5vw, 20px);
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.04em;
             box-shadow: 0 6px 20px rgba(6, 199, 85, 0.45);
             animation: pulse 2s ease-in-out infinite;
         }
@@ -59,40 +62,47 @@
             100% { transform: scale(1);    box-shadow: 0 6px 20px rgba(6,199,85,0.45); }
         }
 
-        .cta-btn:hover { opacity: 0.9; }
+        .cta-btn:active { opacity: 0.85; transform: scale(0.98); }
 
         .cta-label {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: normal;
             margin-bottom: 4px;
             opacity: 0.9;
         }
 
         .cta-note {
-            margin-top: 12px;
-            font-size: 12px;
+            margin-top: 10px;
+            font-size: 11px;
             color: #888;
         }
 
-        /* 画面下固定CTA */
+        /* 画面下固定CTA（iPhoneホームバー対応）*/
         .sticky-cta {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             background: rgba(255,255,255,0.97);
-            padding: 10px 16px 12px;
+            padding: 10px 16px;
+            padding-bottom: calc(10px + env(safe-area-inset-bottom));
             box-shadow: 0 -3px 16px rgba(0,0,0,0.12);
             text-align: center;
             z-index: 100;
         }
 
         .sticky-cta .cta-btn {
-            max-width: 480px;
-            padding: 16px 24px;
-            font-size: 18px;
+            padding: 15px 16px;
+            font-size: clamp(15px, 4vw, 18px);
             animation: none;
+            width: 94%;
+        }
+
+        /* タブレット以上 */
+        @media (min-width: 600px) {
+            .cta-btn { font-size: 20px; }
+            .sticky-cta .cta-btn { font-size: 18px; }
         }
     </style>
 </head>
