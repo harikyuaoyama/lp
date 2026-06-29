@@ -18,17 +18,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background: #f0f0f0;
+            background: #fff;
             font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
+            padding-bottom: calc(80px + env(safe-area-inset-bottom));
             -webkit-text-size-adjust: 100%;
         }
 
-        .page-wrapper {
-            max-width: 430px;
-            margin: 0 auto;
-            background: #fff;
-            padding-bottom: calc(80px + env(safe-area-inset-bottom));
-        }
+        .page-wrapper { display: block; }
 
         .lp-wrapper {
             position: relative;
