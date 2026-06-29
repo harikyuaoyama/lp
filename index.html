@@ -37,36 +37,43 @@
         }
 
         .cta-btn {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 92%;
             max-width: 440px;
             margin: 0 auto;
-            padding: 20px 16px;
+            padding: 14px 18px;
             background: #06C755;
             color: #fff;
             font-size: clamp(16px, 4.5vw, 20px);
             font-weight: bold;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 10px;
             letter-spacing: 0.04em;
-            box-shadow: 0 6px 20px rgba(6, 199, 85, 0.45);
+            box-shadow: 0 4px 14px rgba(6, 199, 85, 0.5);
             animation: pulse 2s ease-in-out infinite;
         }
 
         @keyframes pulse {
-            0%   { transform: scale(1);    box-shadow: 0 6px 20px rgba(6,199,85,0.45); }
-            50%  { transform: scale(1.03); box-shadow: 0 8px 28px rgba(6,199,85,0.65); }
-            100% { transform: scale(1);    box-shadow: 0 6px 20px rgba(6,199,85,0.45); }
+            0%   { transform: scale(1);    box-shadow: 0 4px 14px rgba(6,199,85,0.5); }
+            50%  { transform: scale(1.03); box-shadow: 0 6px 22px rgba(6,199,85,0.7); }
+            100% { transform: scale(1);    box-shadow: 0 4px 14px rgba(6,199,85,0.5); }
         }
 
         .cta-btn:active { opacity: 0.85; transform: scale(0.98); }
 
-        .cta-label {
-            display: block;
-            font-size: 11px;
-            font-weight: normal;
-            margin-bottom: 4px;
-            opacity: 0.9;
+        .btn-icon { flex-shrink: 0; width: 32px; height: 32px; }
+
+        .btn-text { flex: 1; text-align: center; }
+
+        .btn-arrow {
+            flex-shrink: 0;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.8);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; line-height: 1;
         }
 
         .cta-note {
@@ -90,7 +97,7 @@
         }
 
         .sticky-cta .cta-btn {
-            padding: 15px 16px;
+            padding: 13px 18px;
             font-size: clamp(15px, 4vw, 18px);
             animation: none;
             width: 94%;
@@ -111,8 +118,12 @@
     <!-- 画像下CTA -->
     <div class="cta-section">
         <a href="https://lin.ee/o638sWE" class="cta-btn" target="_blank" rel="noopener">
-            <span class="cta-label">✅ 24時間受付・返信率100%</span>
-            LINEで予約する
+            <svg class="btn-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="7" fill="rgba(255,255,255,0.22)"/>
+                <text x="16" y="21" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="10" font-weight="bold">LINE</text>
+            </svg>
+            <span class="btn-text">LINEで予約する</span>
+            <span class="btn-arrow">›</span>
         </a>
         <p class="cta-note">ボタンを押すとLINEアプリが開きます</p>
     </div>
@@ -120,7 +131,12 @@
     <!-- 画面下固定CTA -->
     <div class="sticky-cta">
         <a href="https://lin.ee/o638sWE" class="cta-btn" target="_blank" rel="noopener">
-            LINEで予約する
+            <svg class="btn-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="7" fill="rgba(255,255,255,0.22)"/>
+                <text x="16" y="21" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="10" font-weight="bold">LINE</text>
+            </svg>
+            <span class="btn-text">LINEで予約する</span>
+            <span class="btn-arrow">›</span>
         </a>
     </div>
 
