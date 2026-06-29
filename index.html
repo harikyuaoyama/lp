@@ -24,10 +24,26 @@
             -webkit-text-size-adjust: 100%;
         }
 
+        .lp-wrapper {
+            position: relative;
+            display: block;
+        }
+
         .lp-image {
             display: block;
             width: 100%;
         }
+
+        .line-hotspot {
+            position: absolute;
+            left: 1.6%;
+            width: 96.5%;
+            display: block;
+            cursor: pointer;
+        }
+
+        .line-hotspot-1 { top: 64.5%; height: 0.5%; }
+        .line-hotspot-2 { top: 93.8%; height: 0.5%; }
 
         /* 画像下CTA */
         .cta-section {
@@ -112,7 +128,11 @@
 <body>
 
     <!-- LPメイン画像 -->
-    <img src="lp.jpg" alt="頭痛でお悩みの方へ｜青山バランスアップ治療院" class="lp-image" loading="eager" decoding="async">
+    <div class="lp-wrapper">
+        <img src="lp.jpg" alt="頭痛でお悩みの方へ｜青山バランスアップ治療院" class="lp-image" loading="eager" decoding="async">
+        <a href="https://lin.ee/xiSRMSh" class="line-hotspot line-hotspot-1" target="_blank" rel="noopener"></a>
+        <a href="https://lin.ee/xiSRMSh" class="line-hotspot line-hotspot-2" target="_blank" rel="noopener"></a>
+    </div>
 
     <!-- 画像下CTA -->
     <div class="cta-section">
