@@ -71,9 +71,17 @@
             border-radius: 10px;
             letter-spacing: 0.04em;
             box-shadow: 0 4px 14px rgba(6, 199, 85, 0.5);
+            will-change: transform;
+            transform-origin: center;
+            -webkit-animation: pulse 2s ease-in-out infinite;
             animation: pulse 2s ease-in-out infinite;
         }
 
+        @-webkit-keyframes pulse {
+            0%   { -webkit-transform: scale(1);   box-shadow: 0 4px 14px rgba(6,199,85,0.5); }
+            50%  { -webkit-transform: scale(1.1); box-shadow: 0 8px 28px rgba(6,199,85,0.75); }
+            100% { -webkit-transform: scale(1);   box-shadow: 0 4px 14px rgba(6,199,85,0.5); }
+        }
         @keyframes pulse {
             0%   { transform: scale(1);    box-shadow: 0 4px 14px rgba(6,199,85,0.5); }
             50%  { transform: scale(1.1);  box-shadow: 0 8px 28px rgba(6,199,85,0.75); }
