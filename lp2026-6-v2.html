@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青山バランスアップ治療院 | 頭痛施術専門整体</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:#fbf1cb;color:#2a2a2a;max-width:480px;margin:0 auto;padding-bottom:80px;overflow-x:hidden;}
+:root{
+  --orange:#e87000;--orange-l:#f5a820;--gold:#c8960c;--crimson:#9b1054;
+  --dark:#2c2c3c;--cream:#fbf1cb;--text:#2a2a2a;--mid:#555;--light:#888;
+}
+
+/* ── STICKY CTA ── */
+.sticky-cta{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;
+  background:var(--crimson);color:white;text-align:center;padding:15px 20px;
+  font-size:17px;font-weight:700;letter-spacing:.04em;z-index:1000;text-decoration:none;display:block;}
+
+/* ── HEADER ── */
+.header{background:white;padding:14px 20px;border-bottom:3px solid var(--orange);display:flex;align-items:center;justify-content:center;gap:12px;}
+.aoyama-icon{width:50px;height:50px;}
+.header-text .en{font-size:10px;color:var(--orange);font-weight:700;letter-spacing:.12em;display:block;}
+.header-text .jp{font-size:15px;color:var(--orange);font-weight:700;display:block;}
+
+/* ── HERO ── */
+.hero{background:var(--cream);padding:24px 20px 0;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.tag{background:var(--orange);color:white;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;}
+.hero-sub{font-size:13px;color:var(--mid);margin-bottom:10px;font-weight:500;text-align:center;}
+.hero-h1{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:700;color:var(--mid);text-align:center;margin-bottom:4px;}
+.hero-h1 .big{font-size:26px;color:var(--text);display:block;line-height:1.4;margin-top:4px;}
+.hero-catchlines{font-size:14px;color:var(--mid);line-height:1.8;margin:12px 0;text-align:center;}
+
+/* laurel badge */
+.laurel-badge{display:flex;align-items:center;justify-content:center;gap:6px;
+  background:linear-gradient(135deg,#9a7000,#e0b030,#c8960c,#e0b030,#9a7000);
+  color:white;border-radius:40px;padding:9px 22px;font-weight:700;font-size:14px;margin:14px 0;letter-spacing:.03em;}
+.laurel{font-size:20px;}
+
+/* hero photo */
+.hero-photo{background:linear-gradient(160deg,#e87000 0%,#f5a820 100%);border-radius:14px;height:270px;
+  display:flex;align-items:center;justify-content:center;color:white;font-size:15px;font-weight:700;
+  text-align:center;margin:16px 0;line-height:1.8;}
+
+/* 8/31 deadline */
+.deadline-text{font-size:12px;color:var(--text);text-align:center;margin-bottom:8px;}
+
+/* gold bar */
+.gold-bar{background:linear-gradient(90deg,#7a5500,#c8960c,#e0b030,#c8960c,#7a5500);
+  color:white;text-align:center;padding:10px 24px;font-size:18px;font-weight:900;letter-spacing:.12em;}
+.gold-bar .big{font-size:26px;}
+
+/* price block */
+.price-block{display:flex;align-items:center;justify-content:center;gap:16px;margin:16px 0;}
+.price-main{}
+.price-label{background:var(--orange);color:white;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;display:inline-block;margin-bottom:4px;}
+.price-num{font-family:'Noto Serif JP',serif;font-size:48px;font-weight:900;color:var(--text);line-height:1;}
+.price-num small{font-size:20px;}
+.price-tax{font-size:12px;color:var(--mid);margin-top:2px;}
+.off-badge{background:linear-gradient(135deg,#9a7000,#e0b030,#c8960c);color:white;
+  border-radius:50%;width:76px;height:76px;display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:15px;text-align:center;flex-shrink:0;box-shadow:0 3px 10px rgba(0,0,0,.25);}
+
+/* feature check list */
+.feat-list{list-style:none;margin:10px 0;}
+.feat-list li{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text);margin-bottom:6px;font-weight:500;}
+.feat-list li::before{content:'✓';color:var(--orange);font-weight:900;}
+
+/* CTA text */
+.cta-note{text-align:center;font-size:14px;color:var(--mid);font-weight:500;margin:8px 0;}
+
+/* HP Beauty button */
+.hp-btn{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:#fff2f8;border:2.5px solid var(--crimson);border-radius:10px;
+  padding:14px 20px;text-decoration:none;margin:12px 0;cursor:pointer;}
+.hp-btn-b{background:var(--crimson);color:white;font-size:22px;font-weight:900;font-style:italic;
+  border-radius:4px;padding:2px 8px;line-height:1;}
+.hp-btn-brand{color:var(--crimson);font-size:15px;font-weight:700;letter-spacing:.03em;}
+.hp-btn-label{color:var(--crimson);font-size:20px;font-weight:700;}
+.hp-btn-arrow{background:var(--crimson);color:white;border-radius:50%;width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+
+/* ── WORRY SECTION ── */
+.worry{background:var(--dark);padding:36px 24px;color:white;}
+.worry-h{text-align:center;font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;color:white;margin-bottom:24px;line-height:1.5;}
+.worry-h span{color:#f5a820;}
+.worry-list{list-style:none;margin-bottom:24px;}
+.worry-list li{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14px;line-height:1.6;}
+.worry-list li:last-child{border-bottom:none;}
+.worry-chk{color:#f5a820;font-size:18px;flex-shrink:0;margin-top:1px;}
+.worry-sol{background:var(--orange);color:white;border-radius:10px;padding:14px 20px;text-align:center;font-weight:700;font-size:16px;margin-top:8px;}
+
+/* ── CAUSE SECTION ── */
+.cause{background:var(--cream);padding:40px 24px;}
+.sec-h{text-align:center;font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.5;}
+.sec-sub{text-align:center;font-size:13px;color:var(--mid);margin-bottom:28px;line-height:1.7;}
+.cause-cards{display:flex;flex-direction:column;gap:14px;margin-bottom:20px;}
+.cause-card{display:flex;align-items:flex-start;gap:14px;background:white;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.c-num{background:var(--orange);color:white;border-radius:50%;width:40px;height:40px;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;flex-shrink:0;}
+.cause-card h3{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.cause-card p{font-size:13px;color:var(--mid);line-height:1.6;}
+.warning-box{background:#fff5f0;border-left:4px solid var(--orange);border-radius:8px;padding:16px;margin:20px 0;font-size:13px;line-height:1.7;color:var(--text);}
+.warning-box strong{color:var(--orange);}
+
+/* autonomic */
+.auto-box{background:#f0e8c0;border-radius:12px;padding:20px;margin:24px 0;}
+.auto-h{text-align:center;font-size:16px;font-weight:700;color:var(--orange);margin-bottom:12px;}
+.auto-illust{background:white;border-radius:8px;height:100px;display:flex;align-items:center;justify-content:center;margin:10px 0;font-size:36px;}
+.auto-text{font-size:13px;color:var(--text);line-height:1.7;}
+
+/* ── SOLUTION SECTION ── */
+.solution{background:var(--cream);padding:36px 24px;}
+.sol-cta{text-align:center;font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;color:var(--orange);margin-bottom:20px;}
+.sol-text{font-size:14px;color:var(--text);line-height:1.8;margin-bottom:14px;}
+.sol-comparison{background:white;border-radius:12px;padding:16px;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.sol-comparison .bad{font-size:13px;color:var(--mid);margin-bottom:8px;padding-bottom:10px;border-bottom:1px solid #eee;}
+.sol-comparison .good{font-size:13px;color:var(--text);font-weight:600;}
+.sol-comparison .good strong{color:var(--orange);}
+.sol-feats{display:flex;flex-direction:column;gap:10px;margin:20px 0;}
+.sol-feat{background:white;border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 6px rgba(0,0,0,.06);}
+.sol-feat-icon{font-size:24px;flex-shrink:0;}
+.sol-feat-text{font-size:14px;font-weight:700;color:var(--text);}
+
+/* ── BEFORE/AFTER ── */
+.ba-section{background:#ddd9d0;padding:32px 20px;
+  background-image:repeating-linear-gradient(45deg,transparent,transparent 15px,rgba(0,0,0,.03) 15px,rgba(0,0,0,.03) 16px);}
+.ba-sec-h{text-align:center;font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.ba-note{text-align:center;font-size:11px;color:var(--mid);margin-bottom:20px;}
+.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.ba-photo{border-radius:10px;overflow:hidden;background:#b8b0a0;height:180px;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:10px;}
+.ba-label{background:rgba(0,0,0,.5);color:white;font-size:13px;font-weight:700;padding:4px 12px;border-radius:4px;margin-bottom:4px;}
+.ba-caption{font-size:13px;font-weight:700;color:var(--text);text-align:center;margin:8px 0;}
+.ba-period{display:inline-block;background:var(--orange);color:white;border-radius:20px;padding:3px 12px;font-size:11px;font-weight:700;}
+
+/* ── TESTIMONIALS BOARDS GRID ── */
+.boards-section{background:#f0e8c0;padding:32px 20px;}
+.boards-h{text-align:center;font-size:16px;font-weight:700;color:var(--text);margin-bottom:16px;}
+.boards-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.board-card{background:#faf8f0;border:1px solid #d0c080;border-radius:8px;padding:10px;min-height:160px;}
+.board-text{font-size:10.5px;color:#333;line-height:1.55;}
+.advert-note{text-align:center;font-size:12px;color:var(--mid);line-height:1.7;margin:10px 0 16px;}
+
+/* ── TREATMENT PAIR ── */
+.treat-pair{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px 0;}
+.treat-photo{background:linear-gradient(135deg,#e87000,#f5a020);border-radius:10px;
+  width:42%;height:145px;display:flex;align-items:center;justify-content:center;
+  color:white;font-size:12px;font-weight:700;text-align:center;line-height:1.6;}
+.plus-circle{background:var(--orange);color:white;border-radius:50%;width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0;}
+
+/* ── PRICING CTA SECTION ── */
+.price-cta{background:radial-gradient(ellipse at center,#e8e4d4,#d4d0c4);padding:30px 20px;}
+
+/* ── 3 REASONS ── */
+.reasons{background:var(--cream);padding:40px 20px;}
+.reason-card{background:white;border-radius:16px;padding:22px 20px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,.08);}
+.reason-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.reason-num{background:var(--orange);color:white;font-size:10px;font-weight:900;
+  padding:3px 6px;border-radius:4px;letter-spacing:.03em;line-height:1.8;}
+.reason-title{font-size:17px;font-weight:700;color:var(--text);}
+.reason-subtitle{font-size:13px;font-weight:700;color:var(--orange);margin-bottom:8px;}
+.reason-photo{background:linear-gradient(135deg,#e87000,#f5a020);border-radius:8px;height:120px;
+  display:flex;align-items:center;justify-content:center;color:white;font-size:12px;font-weight:700;
+  text-align:center;margin-bottom:12px;}
+.reason-text{font-size:13px;color:var(--mid);line-height:1.7;}
+.reason-list{list-style:none;margin-top:8px;}
+.reason-list li{font-size:13px;color:var(--mid);padding:5px 0;border-bottom:1px solid #eee;}
+.reason-list li::before{content:'✦ ';color:var(--orange);}
+.reason-list li:last-child{border-bottom:none;}
+
+/* ── CUSTOMER VOICES ── */
+.voices{background:#f0e8c0;padding:40px 20px;}
+.voice-card{background:white;border-radius:16px;padding:18px 20px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.voice-header{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.voice-avatar{background:linear-gradient(135deg,#e8c060,#f0d090);border-radius:50%;
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.voice-title{font-size:14px;font-weight:700;color:var(--text);}
+.voice-period{font-size:11px;color:var(--orange);font-weight:700;}
+.voice-img{background:linear-gradient(135deg,#d0c8a0,#e0d8b0);border-radius:8px;height:90px;
+  display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:12px;margin-bottom:10px;}
+.voice-text{font-size:13px;color:var(--mid);line-height:1.6;}
+
+/* results list */
+.results-box{background:linear-gradient(135deg,#2c2c3c,#1a1a2e);border-radius:12px;padding:20px;margin:20px 0;}
+.results-box h3{color:white;font-size:15px;font-weight:700;text-align:center;margin-bottom:14px;}
+.results-list{list-style:none;}
+.results-list li{display:flex;align-items:flex-start;gap:8px;padding:7px 0;
+  border-bottom:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.9);}
+.results-list li:last-child{border-bottom:none;}
+.results-list li::before{content:'★';color:var(--orange-l);font-size:14px;flex-shrink:0;}
+
+/* ── DIRECTOR ── */
+.director{background:white;padding:40px 24px;}
+.dir-photo{background:linear-gradient(135deg,#e87000,#f5a020);border-radius:14px;height:240px;
+  display:flex;align-items:center;justify-content:center;color:white;font-size:15px;font-weight:700;
+  text-align:center;line-height:1.8;margin-bottom:20px;}
+.dir-name{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--text);text-align:center;margin-bottom:4px;}
+.dir-title{font-size:12px;color:var(--orange);font-weight:700;text-align:center;margin-bottom:20px;letter-spacing:.05em;}
+.dir-text{font-size:14px;color:var(--text);line-height:1.9;}
+.dir-thought-h{font-size:16px;font-weight:700;color:var(--orange);text-align:center;margin:24px 0 12px;
+  padding-top:20px;border-top:1px solid #eee;}
+
+/* ── GUARANTEE ── */
+.guarantee{background:linear-gradient(160deg,#1a1a2e,#2c2c4a);padding:40px 24px;text-align:center;}
+.guar-h{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;color:white;margin-bottom:28px;}
+.coins-row{display:flex;justify-content:center;gap:14px;margin-bottom:24px;}
+.coin{background:linear-gradient(135deg,#8a6000,#e0b030,#c8960c,#e0b030,#8a6000);
+  border-radius:50%;width:88px;height:88px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;color:white;text-align:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.35);border:3px solid rgba(255,255,255,.2);}
+.coin-main{font-size:14px;font-weight:900;line-height:1.2;}
+.coin-sub{font-size:9px;margin-top:2px;line-height:1.3;}
+.guar-cards{display:flex;flex-direction:column;gap:14px;}
+.guar-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:16px;text-align:left;}
+.guar-card h3{color:#f0c030;font-size:15px;font-weight:700;margin-bottom:6px;}
+.guar-card p{color:rgba(255,255,255,.85);font-size:13px;line-height:1.6;}
+
+/* ── SESSION FLOW ── */
+.flow{background:var(--cream);padding:40px 20px;}
+.flow-kana{text-align:center;font-size:11px;color:var(--mid);letter-spacing:.2em;margin-bottom:4px;}
+.flow-h{text-align:center;font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:32px;}
+.step-item{display:flex;gap:16px;margin-bottom:32px;}
+.step-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.step-word{font-size:10px;font-weight:900;color:var(--orange);letter-spacing:.08em;}
+.step-num{background:var(--orange);color:white;border-radius:50%;width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;}
+.step-line{width:2px;background:repeating-linear-gradient(to bottom,var(--orange) 0,var(--orange) 6px,transparent 6px,transparent 10px);
+  flex:1;margin-top:4px;}
+.step-right{flex:1;padding-top:2px;}
+.step-title-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.step-title{font-size:20px;font-weight:700;color:var(--orange);}
+.step-photo{background:linear-gradient(135deg,#d0c0a0,#e0d0b0);border-radius:10px;height:130px;
+  display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:12px;margin-bottom:12px;}
+.step-body{font-size:14px;color:var(--text);line-height:1.8;}
+.step-body strong{font-weight:700;}
+
+/* gold banner in flow */
+.gold-banner{background:linear-gradient(135deg,#9a7000,#c8960c,#e8c030,#c8960c,#9a7000);
+  color:white;text-align:center;padding:24px;font-family:'Noto Serif JP',serif;
+  font-size:19px;font-weight:700;line-height:1.7;border-radius:12px;margin:8px 20px 24px;}
+
+/* flow note */
+.flow-note{font-size:11px;color:var(--mid);text-align:center;line-height:1.7;margin:16px 0;}
+
+/* ── FAQ ── */
+.faq{padding:40px 20px;
+  background:#d4d0c8;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(0,0,0,.04) 24px,rgba(0,0,0,.04) 25px),
+    repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(0,0,0,.04) 24px,rgba(0,0,0,.04) 25px);}
+.faq-title-box{background:white;border-radius:12px;text-align:center;padding:14px 20px;margin-bottom:20px;}
+.faq-title{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;color:var(--text);}
+.faq-item{background:#f0f0f8;border-radius:12px;padding:16px;margin-bottom:14px;}
+.faq-q{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;
+  border-bottom:2px dashed #e0a040;padding-bottom:12px;}
+.faq-q-icon{background:var(--orange);color:white;border-radius:50%;width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;flex-shrink:0;}
+.faq-q-text{font-size:14px;font-weight:700;color:var(--text);line-height:1.5;padding-top:3px;}
+.faq-a{display:flex;align-items:flex-start;gap:10px;}
+.faq-a-icon{background:var(--orange-l);color:white;border-radius:50%;width:28px;height:28px;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;flex-shrink:0;}
+.faq-a-text{font-size:13px;color:var(--mid);line-height:1.7;padding-top:3px;}
+
+/* ── CLOSING CTA ── */
+.closing{padding:32px 20px 40px;
+  background:#d4d0c8;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(0,0,0,.04) 24px,rgba(0,0,0,.04) 25px),
+    repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(0,0,0,.04) 24px,rgba(0,0,0,.04) 25px);}
+.closing-note{font-size:13px;color:var(--text);text-align:center;line-height:1.8;margin-bottom:20px;background:rgba(255,255,255,.5);border-radius:8px;padding:14px;}
+
+/* ── ACCESS ── */
+.access{background:var(--cream);padding:40px 20px;}
+.access-logo-row{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.access-clinic-photo{background:linear-gradient(135deg,#b0b0b8,#c8c8d0);border-radius:10px;height:170px;
+  display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:700;margin-bottom:20px;}
+.access-info{font-size:14px;color:var(--text);line-height:2;}
+.access-info .label{font-weight:700;display:inline-block;min-width:4em;}
+.orange-btn{display:block;background:var(--orange);color:white;text-align:center;padding:16px 24px;
+  border-radius:10px;font-size:17px;font-weight:700;text-decoration:none;margin:14px 0;letter-spacing:.04em;}
+
+/* ── HP BOOKING ── */
+.hp-booking{background:var(--cream);padding:28px 20px 40px;}
+.hp-box{border:2.5px solid var(--crimson);border-radius:14px;overflow:hidden;}
+.hp-box-header{background:var(--crimson);color:white;text-align:center;padding:14px;font-size:18px;font-weight:700;}
+.hp-box-body{padding:20px;}
+.hp-box-sub{font-size:13px;color:var(--mid);margin-bottom:20px;text-align:center;}
+.hp-step{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;}
+.hp-step-num{background:var(--crimson);color:white;border-radius:50%;width:32px;height:32px;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;flex-shrink:0;}
+.hp-step h4{font-size:15px;font-weight:700;color:var(--crimson);margin-bottom:4px;}
+.hp-step p{font-size:13px;color:var(--mid);line-height:1.6;}
+.phone-mockup{background:#1a1a2a;border-radius:20px;padding:14px;margin:20px auto 0;max-width:200px;
+  min-height:170px;display:flex;align-items:center;justify-content:center;color:#888;font-size:11px;text-align:center;}
+
+/* ── FOOTER ── */
+.footer{background:#e0d8b8;padding:24px 20px;text-align:center;}
+.footer-name{font-size:16px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.footer-info{font-size:12px;color:var(--mid);line-height:1.9;margin-bottom:10px;}
+.footer-links{font-size:11px;color:var(--mid);}
+.footer-links a{color:var(--mid);text-decoration:underline;}
+
+/* utilities */
+.sep{border:none;border-top:1px dashed rgba(232,112,0,.3);margin:20px 0;}
+.text-c{text-align:center;}
+.mt8{margin-top:8px;}
+.mb0{margin-bottom:0;}
+</style>
+</head>
+<body>
+
+<!-- ===== STICKY CTA ===== -->
+<a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="sticky-cta">
+  HOT PEPPER Beauty で予約する ▶
+</a>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <svg class="aoyama-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="17" cy="25" r="14" fill="#e87000" opacity=".9"/>
+    <circle cx="33" cy="25" r="14" fill="#e87000" opacity=".9"/>
+    <path d="M25 13 Q18 20 18 28 Q18 34 25 37 Q32 34 32 28 Q32 20 25 13Z" fill="white" opacity=".6"/>
+  </svg>
+  <div class="header-text">
+    <span class="en">AOYAMA Balance up Clinic</span>
+    <span class="jp">青山バランスアップ治療院</span>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="tags">
+    <span class="tag">頭痛</span>
+    <span class="tag">自律神経症状</span>
+    <span class="tag">歯ぎしり・食いしばり</span>
+  </div>
+  <p class="hero-sub">病院探しを最後にしたい方へ</p>
+
+  <div class="laurel-badge">
+    <span class="laurel">❧</span>
+    <span>1000件以上の症状改善実績</span>
+    <span class="laurel">❧</span>
+  </div>
+
+  <div class="hero-photo">
+    院長 青山幸太 先生<br>
+    （オレンジユニフォーム）
+  </div>
+
+  <p class="hero-h1">
+    <span class="big">どこに行っても<br>治らない</span>
+  </p>
+  <p style="text-align:center;font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;color:var(--text);margin:10px 0;">
+    頭痛施術専門の整体院
+  </p>
+  <div class="hero-catchlines">
+    <p>✔ 3ヶ月で頭痛薬が必要なくなる</p>
+    <p>✔ 1年以上治らなかった頭痛が改善</p>
+  </div>
+  <p style="text-align:center;font-size:11px;color:var(--mid);margin-bottom:20px;">※2025年7月現在 ※効果を保証するものではありません</p>
+</section>
+
+<!-- ===== HERO PRICE CTA ===== -->
+<div style="background:linear-gradient(160deg,#f0e8a8,#fbf1cb);padding:24px 20px;">
+  <p class="deadline-text">8月31日まで 通常料金8,500円のところ</p>
+
+  <div class="gold-bar" style="margin:0 0 14px;border-radius:6px;">
+    毎月 <span class="big">5</span> 名様限定
+  </div>
+
+  <div class="price-block">
+    <div class="price-main">
+      <span class="price-label">初回 限定</span>
+      <div class="price-num"><small>¥</small>2,980<small>円</small></div>
+      <p class="price-tax">（税込）</p>
+    </div>
+    <div class="off-badge">65%<br>OFF</div>
+  </div>
+
+  <ul class="feat-list" style="margin:14px 0;">
+    <li>全身を調整する整体</li>
+    <li>痛くない頚椎調整</li>
+    <li>丁寧なカウンセリング付き</li>
+  </ul>
+
+  <p class="cta-note">\3分で予約完了/</p>
+
+  <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hp-btn">
+    <span class="hp-btn-b">B</span>
+    <span>
+      <span class="hp-btn-brand">HOT PEPPER Beauty</span><br>
+      <span class="hp-btn-label">予約する ▶</span>
+    </span>
+  </a>
+</div>
+
+<!-- ===== WORRY SECTION ===== -->
+<section class="worry">
+  <h2 class="worry-h">こんなお悩み<br><span>ありませんか？</span></h2>
+  <ul class="worry-list">
+    <li><span class="worry-chk">■</span>一年以上、頭痛が続いている</li>
+    <li><span class="worry-chk">■</span>毎日、頭痛薬が手放せない</li>
+    <li><span class="worry-chk">■</span>子供たちに感情的になってしまう</li>
+    <li><span class="worry-chk">■</span>朝一で頭が痛くて起きるのがツラい</li>
+    <li><span class="worry-chk">■</span>仕事中の頭痛で集中できない</li>
+    <li><span class="worry-chk">■</span>歯ぎしり・食いしばりで歯が削れている</li>
+    <li><span class="worry-chk">■</span>病院に行ったけど異常なし、痛み止めだけ</li>
+  </ul>
+  <div class="worry-sol">そのお悩み、当院で解決できます！</div>
+</section>
+
+<!-- ===== CAUSE SECTION ===== -->
+<section class="cause">
+  <h2 class="sec-h">どうして頭痛が<br>治らないのか？</h2>
+  <p class="sec-sub">頭痛がなかなか治らない原因は大きく３つあります。</p>
+
+  <div class="cause-cards">
+    <div class="cause-card">
+      <div class="c-num">①</div>
+      <div>
+        <h3>頚椎の歪みがある</h3>
+        <p>首の骨のズレが神経や血管を圧迫し、頭痛の直接的な原因になります。</p>
+      </div>
+    </div>
+    <div class="cause-card">
+      <div class="c-num">②</div>
+      <div>
+        <h3>呼吸が浅い（酸欠）</h3>
+        <p>浅い呼吸は脳への酸素供給を妨げ、頭痛・自律神経の乱れを引き起こします。</p>
+      </div>
+    </div>
+    <div class="cause-card">
+      <div class="c-num">③</div>
+      <div>
+        <h3>食いしばりがある</h3>
+        <p>顎の緊張が頭部・首肩に広がり、慢性的な頭痛・頭重感を生み出します。</p>
+      </div>
+    </div>
+  </div>
+
+  <p style="text-align:center;font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px;">
+    この３つを解決していないと、頭痛は治りません。
+  </p>
+
+  <div class="warning-box">
+    「頭痛薬を飲めばいいでしょ」と考えますが——<br><br>
+    1ヶ月に10日以上頭痛薬でごまかすと、頭痛が慢性化・悪化する<strong>薬物乱用性頭痛</strong>になるだけでなく、頭痛の頻度が増えたり、頭痛薬が効きづらくなります。<br><br>
+    最悪は脳腫瘍やクモ膜下出血、脳出血など命に関わる疾患を見逃す危険性もあります。
+  </div>
+
+  <div class="auto-box">
+    <p class="auto-h">実は自律神経も関係しています</p>
+    <div class="auto-illust">🧠⚡🫀</div>
+    <p class="auto-text">
+      自律神経の不調は主にストレスが原因で、交感神経と副交感神経のバランスが崩れて起こる様々な症状です。<br><br>
+      頭痛で悩んでいる方の多くは「頭痛＋自律神経」「肩こり＋自律神経」「筋肉・関節痛＋自律神経」のように症状が合わさっていることが多いです。<br><br>
+      なかなか改善しないのは頭痛の原因が筋肉・関節だけでなく<strong>自律神経も整える必要があるから</strong>です。
+    </p>
+  </div>
+</section>
+
+<!-- ===== SOLUTION ===== -->
+<section class="solution">
+  <h2 class="sol-cta">そのお悩み、<br>当院で解決できます！</h2>
+
+  <p class="sol-text">
+    長く続いている頭痛は諦めなければならないのか？<strong>それは違います！</strong>
+  </p>
+
+  <div class="sol-comparison">
+    <p class="bad">一般的な頭痛治療では 首や肩を揉んで血流を良くする、ストレッチで筋肉を伸ばし動きを良くするだけ……<br>なぜ頚椎の歪みが起きたのか、呼吸が浅くなったのはなぜか、根本的な原因の解決にはなりません。</p>
+    <p class="good">当院では、一人ひとり身体の状態やバランスをチェックして <strong>この3つを掛け合わせることで</strong>、「頭痛が改善する」だけでなく「<strong>頭痛になりにくい身体</strong>」をつくり出します。</p>
+  </div>
+
+  <div class="sol-feats">
+    <div class="sol-feat"><span class="sol-feat-icon">🦴</span><span class="sol-feat-text">筋肉・関節・神経を調整する</span></div>
+    <div class="sol-feat"><span class="sol-feat-icon">🫁</span><span class="sol-feat-text">姿勢、呼吸、自律神経を整える</span></div>
+    <div class="sol-feat"><span class="sol-feat-icon">🦵</span><span class="sol-feat-text">股関節・骨盤・重心サポート</span></div>
+  </div>
+</section>
+
+<!-- ===== BEFORE/AFTER ===== -->
+<section class="ba-section">
+  <h2 class="ba-sec-h">当院の施術ではこんな効果が</h2>
+  <p class="ba-note">※効果には個人差があり、写真は効果効能を保証するものではございません。</p>
+
+  <div class="ba-pair" style="margin-bottom:6px;">
+    <div class="ba-photo">
+      <div class="ba-label">Before</div>
+    </div>
+    <div class="ba-photo">
+      <div class="ba-label">After</div>
+    </div>
+  </div>
+  <p class="ba-caption">食いしばりが軽減して頭痛も軽くなった</p>
+  <p class="text-c"><span class="ba-period">1ヶ月</span></p>
+
+  <hr class="sep" style="margin:20px 0;">
+
+  <div class="ba-pair" style="margin-bottom:6px;">
+    <div class="ba-photo">
+      <div class="ba-label">Before</div>
+    </div>
+    <div class="ba-photo">
+      <div class="ba-label">After</div>
+    </div>
+  </div>
+  <p class="ba-caption">毎日飲んでいた頭痛薬が必要なくなった</p>
+  <p class="text-c"><span class="ba-period">2ヶ月</span></p>
+
+  <div class="results-box" style="margin-top:24px;">
+    <h3>施術を受けた方の変化</h3>
+    <ul class="results-list">
+      <li>一年以上続いていた頭痛から解放された</li>
+      <li>毎日持ち歩いていた頭痛薬を手放せた</li>
+      <li>気持ちに余裕が出来て、子供たちに優しくなった</li>
+      <li>朝起きる時の痛みがなく、スッキリ起きられる</li>
+      <li>天気の変化で起きていた頭痛が無くなった</li>
+      <li>歯ぎしり・食いしばりが減って、顎が楽になった</li>
+      <li>痛み止めを卒業、病院に行かなくても良くなった</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIAL BOARDS ===== -->
+<section class="boards-section">
+  <h2 class="boards-h">お客様の声（直筆）</h2>
+  <div class="boards-grid">
+    <div class="board-card">
+      <p class="board-text">身体のこわばりが一気に楽になりました。特に腰の痛み、首肩のこり、筋肉のハリ！！動的成も広がって、パワフルに動けそうです♡</p>
+    </div>
+    <div class="board-card">
+      <p class="board-text">肩こりからくる頭痛に悩んでいましたが施術を受けた直後から、背筋が伸び楽になったように感じました。頭がスッキリして長年の辛さが改善され日々の生活が楽になりました。</p>
+    </div>
+    <div class="board-card">
+      <p class="board-text">頭痛がひどくて具合が悪かった時にお世話になりました。体のバランスが原因でした。施術が終わると首が軽くなり、呼吸も深くなって頭痛がなくなりました。ありがとうございます。</p>
+    </div>
+    <div class="board-card">
+      <p class="board-text">頭痛スッキリ♪くいしばり軽減で顔もお目々もスッキリパキリになりました。翌日もよくなりました♡いつもありがとうございます！</p>
+    </div>
+  </div>
+
+  <p class="advert-note">
+    「本当に自分に合うのかな…」と不安な方のために<br>
+    ただいま初回体験 2,980円キャンペーンをしております。<br>
+    <small style="color:var(--light);">なお、このページは広告限定ページのため検索からは見つけることが出来ません。<br>必ずこの機会にご予約をお済ませください。</small>
+  </p>
+
+  <div class="gold-bar" style="border-radius:6px;margin:0 0 16px;">
+    毎月 <span class="big">5</span> 名様限定
+  </div>
+
+  <div class="treat-pair">
+    <div class="treat-photo">全身バランス<br>整体施術</div>
+    <div class="plus-circle">＋</div>
+    <div class="treat-photo">痛くない<br>頚椎調整</div>
+  </div>
+</section>
+
+<!-- ===== PRICING CTA 2 ===== -->
+<div class="price-cta">
+  <p class="deadline-text">8月31日まで 通常料金8,500円のところ</p>
+  <div class="gold-bar" style="border-radius:6px;margin:0 0 16px;">毎月 <span class="big">5</span> 名様限定</div>
+  <div class="price-block">
+    <div class="price-main">
+      <span class="price-label">初回 限定</span>
+      <div class="price-num"><small>¥</small>2,980<small>円</small></div>
+      <p class="price-tax">（税込）</p>
+    </div>
+    <div class="off-badge">65%<br>OFF</div>
+  </div>
+  <p class="cta-note">\3分で予約完了/</p>
+  <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hp-btn">
+    <span class="hp-btn-b">B</span>
+    <span>
+      <span class="hp-btn-brand">HOT PEPPER Beauty</span><br>
+      <span class="hp-btn-label">予約する ▶</span>
+    </span>
+  </a>
+</div>
+
+<!-- ===== 3 REASONS ===== -->
+<section class="reasons">
+  <p style="text-align:center;font-size:12px;color:var(--mid);margin-bottom:4px;letter-spacing:.1em;">青山バランスアップ治療院の特徴</p>
+  <h2 class="sec-h" style="margin-bottom:28px;">青山バランスアップ治療院が<br>選ばれる3つの理由</h2>
+
+  <!-- Reason 01 -->
+  <div class="reason-card">
+    <div class="reason-header">
+      <span class="reason-num">STEP<br>01</span>
+      <h3 class="reason-title">丁寧なカウンセリング</h3>
+    </div>
+    <p class="reason-subtitle">完全オーダーメイドで施術プランを設計</p>
+    <div class="reason-photo">カウンセリング・検査の様子</div>
+    <p class="reason-text">
+      詳細な検査とカウンセリングで、身体の歪み・筋肉の固さ・関節・呼吸・重心・自律神経の反応などを評価します。その分析結果をもとに、関節矯正・はり・顎調整・骨盤調整・テーピングを最適に組み合わせた<strong>完全オーダーメイド</strong>の施術プランを設計します。
+    </p>
+    <p style="font-size:13px;color:var(--text);margin-top:10px;font-weight:600;">「どう歪んでいるのか」「なぜ痛みが出ているのか」を丁寧に説明しながら進めていきます。</p>
+  </div>
+
+  <!-- Reason 02 -->
+  <div class="reason-card">
+    <div class="reason-header">
+      <span class="reason-num">STEP<br>02</span>
+      <h3 class="reason-title">最小限の力で、負担のかからない施術</h3>
+    </div>
+    <p class="reason-subtitle">通いやすい診療体制</p>
+    <div class="reason-photo">施術の様子</div>
+    <p class="reason-text">
+      負担がかかり続けてきた体に、余計な負担はかけません。必要な調整を短時間で行い、自然な回復を促します。
+    </p>
+    <ul class="reason-list" style="margin-top:10px;">
+      <li>筋肉のバランスを整える</li>
+      <li>関節のズレをやさしく矯正</li>
+      <li>神経の働きを正常に戻す</li>
+    </ul>
+    <p style="font-size:12px;color:var(--mid);margin-top:10px;">受付は朝7時から夜9時まで、土曜・祝日診療しております。お仕事前や帰宅後にも通院可能です。</p>
+    <p style="font-size:12px;color:var(--mid);margin-top:6px;">当院では妊娠中（安定期以降）から出産直前までの施術、および産後の骨盤ケアに対応しています。</p>
+  </div>
+
+  <!-- Reason 03 -->
+  <div class="reason-card">
+    <div class="reason-header">
+      <span class="reason-num">STEP<br>03</span>
+      <h3 class="reason-title">秋田県で一番清潔な治療院</h3>
+    </div>
+    <p class="reason-subtitle">自律神経・食いしばりケア</p>
+    <div class="reason-photo">清潔な院内</div>
+    <p class="reason-text">開院以来、院内環境・清潔に対して高い意識を持って取り組んでいます。</p>
+    <ul class="reason-list" style="margin-top:10px;">
+      <li>施術ベッドは毎回アルコールで徹底消毒</li>
+      <li>空気清浄機3台＋加湿器3台フル稼働</li>
+      <li>トイレ清掃1日2回 / 院内換気1日2回以上</li>
+      <li>マイナスイオン発生装置 / オゾン機器で空間除菌</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== CUSTOMER VOICES ===== -->
+<section class="voices">
+  <h2 class="sec-h" style="margin-bottom:24px;">お客様の声</h2>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="voice-avatar">😊</div>
+      <div>
+        <p class="voice-title">頭痛、首肩のこり、腰の痛みも一緒に楽に</p>
+        <p class="voice-period">施術期間：1ヶ月</p>
+      </div>
+    </div>
+    <div class="voice-img">施術前後の写真</div>
+    <p class="voice-text">首肩の緊張から起こる頭痛がラクになりました。腰の痛みも一緒に軽くなり、毎日が快適です。</p>
+  </div>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="voice-avatar">🙂</div>
+      <div>
+        <p class="voice-title">頭痛、肩こり、目の疲れ、姿勢がスッキリ</p>
+        <p class="voice-period">施術期間：1ヶ月</p>
+      </div>
+    </div>
+    <div class="voice-img">施術前後の写真</div>
+    <p class="voice-text">肩こりからくる頭痛と目の疲れがスッキリしました。姿勢も改善されて、周りからも変わったと言われます。</p>
+  </div>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="voice-avatar">😌</div>
+      <div>
+        <p class="voice-title">連日続いていた頭痛、呼吸の浅さが解決</p>
+        <p class="voice-period">施術期間：1ヶ月</p>
+      </div>
+    </div>
+    <div class="voice-img">施術前後の写真</div>
+    <p class="voice-text">毎日続いていた頭痛と浅い呼吸が解決しました。深く呼吸できるようになって頭がスッキリしています。</p>
+  </div>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="voice-avatar">😄</div>
+      <div>
+        <p class="voice-title">頭痛、食いしばり、姿勢も良くなった</p>
+        <p class="voice-period">施術期間：2ヶ月</p>
+      </div>
+    </div>
+    <div class="voice-img">施術前後の写真</div>
+    <p class="voice-text">食いしばりが軽減して頭痛も軽くなりました。姿勢も整い、朝の目覚めが全然違います。</p>
+  </div>
+
+  <div class="voice-card">
+    <div class="voice-header">
+      <div class="voice-avatar">😊</div>
+      <div>
+        <p class="voice-title">首肩の張り、頭痛と目の奥の痛みがスッキリ</p>
+        <p class="voice-period">施術期間：2ヶ月</p>
+      </div>
+    </div>
+    <div class="voice-img">施術前後の写真</div>
+    <p class="voice-text">目の奥の痛みがなくなりました。毎日飲んでいた頭痛薬が必要なくなり、生活の質が大幅に上がりました。</p>
+  </div>
+</section>
+
+<!-- ===== DIRECTOR ===== -->
+<section class="director">
+  <div class="dir-photo">院長 青山幸太 先生<br>プロフィール写真</div>
+  <p class="dir-name">院長 青山 幸太</p>
+  <p class="dir-title">青山バランスアップ治療院</p>
+
+  <p class="dir-text">
+    こんにちは。青山バランスアップ治療院、院長の青山幸太です。<br><br>
+    私のふるさと秋田は、自然が豊かで人のあたたかさにあふれた場所です。一方で、少子高齢化や健康不安を抱える方も多く、「治療家として、秋田の力になれないだろうか？」という思いから当院を開院しました。<br><br>
+    当院はただ「痛みをとるだけの場所」ではなく、健康・美容・メンタルケアを通じて、笑顔と豊かなライフスタイルを届けられる場所でありたいと考えています。<br><br>
+    身体のことはもちろん、日々の不安もどうぞ遠慮なくお話しください。当院はあなたの悩みに本気で向き合います。いつでもお気軽にご相談ください。
+  </p>
+  <p class="dir-thought-h">当院の想い</p>
+  <p style="font-size:13px;color:var(--mid);line-height:1.7;">一時的な変化ではなく、安心して長く快適に過ごせる状態へ。お一人おひとりの身体と真剣に向き合い、頭痛のない毎日をサポートします。</p>
+</section>
+
+<!-- ===== GUARANTEE ===== -->
+<section class="guarantee">
+  <h2 class="guar-h">３つをお約束します</h2>
+
+  <div class="coins-row">
+    <div class="coin">
+      <span class="coin-main">全額<br>返金</span>
+    </div>
+    <div class="coin">
+      <span class="coin-main">効果<br>保証</span>
+    </div>
+    <div class="coin">
+      <span class="coin-main">押売<br>無し</span>
+    </div>
+  </div>
+
+  <div class="guar-cards">
+    <div class="guar-card">
+      <h3>💰 全額返金</h3>
+      <p>サービスにご満足いただけなければご返金致します。</p>
+    </div>
+    <div class="guar-card">
+      <h3>✅ 効果保証</h3>
+      <p>万が一、全く効果が出なければ無料で提供致します。</p>
+    </div>
+    <div class="guar-card">
+      <h3>🚫 押売無し</h3>
+      <p>お客様を困らせる押売りは一切行いません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING CTA 3 (before flow) ===== -->
+<div class="price-cta" style="padding-top:28px;">
+  <p class="deadline-text">8月31日まで 通常料金8,500円のところ</p>
+  <div class="gold-bar" style="border-radius:6px;margin:0 0 16px;">毎月 <span class="big">5</span> 名様限定</div>
+  <div class="price-block">
+    <div class="price-main">
+      <span class="price-label">初回 限定</span>
+      <div class="price-num"><small>¥</small>2,980<small>円</small></div>
+      <p class="price-tax">（税込）</p>
+    </div>
+    <div class="off-badge">65%<br>OFF</div>
+  </div>
+  <p class="cta-note">\3分で予約完了/</p>
+  <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hp-btn">
+    <span class="hp-btn-b">B</span>
+    <span>
+      <span class="hp-btn-brand">HOT PEPPER Beauty</span><br>
+      <span class="hp-btn-label">予約する ▶</span>
+    </span>
+  </a>
+</div>
+
+<!-- ===== SESSION FLOW ===== -->
+<section class="flow">
+  <p class="flow-kana">〜 初回体験の流れ 〜</p>
+  <h2 class="flow-h">初回体験の流れ</h2>
+
+  <!-- STEP 01 -->
+  <div class="step-item">
+    <div class="step-left">
+      <span class="step-word">STEP</span>
+      <div class="step-num">01</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-right">
+      <div class="step-title-row"><span class="step-title">問診票の記入</span></div>
+      <div class="step-photo">問診票記入の様子</div>
+      <p class="step-body">ご来店後まずは問診票のご記入をお願いしております。<br>痛みの場所やお悩みなど、なんでもご記入ください。</p>
+    </div>
+  </div>
+
+  <!-- STEP 02 -->
+  <div class="step-item">
+    <div class="step-left">
+      <span class="step-word">STEP</span>
+      <div class="step-num">02</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-right">
+      <div class="step-title-row"><span class="step-title">カウンセリング</span></div>
+      <div class="step-photo">カウンセリングの様子</div>
+      <p class="step-body">問診票の内容に沿ってお話を伺っていきます。今日一番ツラいところから、今まで大変だったことやお悩みなどをお話してください。そこからなぜ頭痛が起きているのか、どうしてよくならなかったのかを見つけ出します。</p>
+    </div>
+  </div>
+
+  <!-- STEP 03 -->
+  <div class="step-item">
+    <div class="step-left">
+      <span class="step-word">STEP</span>
+      <div class="step-num">03</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-right">
+      <div class="step-title-row"><span class="step-title">姿勢チェック</span></div>
+      <div class="step-photo">姿勢チェックの様子</div>
+      <p class="step-body">施術ルームの鏡を使いながら、姿勢と身体のバランスをチェックします。<br><br>前後、左右、回旋の3つの軸から現在のバランスと、整った状態のバランスを体感していただきます。<br><br>まずは自身の身体が現状どうなっているのか、知ることが改善の第一歩です。</p>
+    </div>
+  </div>
+
+  <!-- STEP 04 -->
+  <div class="step-item">
+    <div class="step-left">
+      <span class="step-word">STEP</span>
+      <div class="step-num">04</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-right">
+      <div class="step-title-row"><span class="step-title">体の状態を解説</span></div>
+      <div class="step-photo">解説の様子</div>
+      <p class="step-body">「今、自分の身体がどうなっているのか？」をわかりやすく説明します。<br><br>なぜ頭痛が起きているのか、どうして今まで良くならなかったのかをわかりやすく解説していきます。<br><br>わからないことは遠慮なく聞いてください。</p>
+    </div>
+  </div>
+
+  <!-- STEP 05 -->
+  <div class="step-item">
+    <div class="step-left">
+      <span class="step-word">STEP</span>
+      <div class="step-num">05</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-right">
+      <div class="step-title-row"><span class="step-title">全身バランス整体</span></div>
+      <div class="step-photo">全身整体の様子</div>
+      <p class="step-body">カウンセリングと姿勢チェックによってわかった身体の状態を、全身の筋肉・関節・神経を整えます。<br><br>
+        <strong>【痛み】</strong> 負担が無くなり、痛みが変わる<br>
+        <strong>【姿勢】</strong> 関節・筋肉が自然な位置に戻る<br>
+        <strong>【呼吸】</strong> 横隔膜の動きが良くなり、呼吸が深くなる
+      </p>
+    </div>
+  </div>
+
+  <!-- STEP 06 -->
+  <div class="step-item">
+    <div class="step-left">
+      <span class="step-word">STEP</span>
+      <div class="step-num">06</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-right">
+      <div class="step-title-row"><span class="step-title">頭痛矯正</span></div>
+      <div class="step-photo">頭痛矯正の様子</div>
+      <p class="step-body">首や肩、背中の筋肉と関節を調整することで、負担と血流が改善され、頭痛の症状を軽減します。<br><br>痛みを感じる神経の通り道を調整することで、<strong>痛みの強度が低下し、頭痛の発生を抑えます。</strong></p>
+    </div>
+  </div>
+
+  <!-- STEP 07 -->
+  <div class="step-item">
+    <div class="step-left">
+      <span class="step-word">STEP</span>
+      <div class="step-num">07</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-right">
+      <div class="step-title-row"><span class="step-title">自律神経調整<br>食いしばり調整</span></div>
+      <div class="step-photo">自律神経調整の様子</div>
+      <p class="step-body">呼吸の深さと自律神経のバランスを整えることで、片頭痛の予防や緩和に効果を発揮します。<br><br>顎関節を調整することでスムーズに口の開け閉めができるようになり、食いしばりを緩和させます。</p>
+    </div>
+  </div>
+
+  <!-- STEP 08 -->
+  <div class="step-item" style="margin-bottom:8px;">
+    <div class="step-left">
+      <span class="step-word">STEP</span>
+      <div class="step-num">08</div>
+    </div>
+    <div class="step-right">
+      <div class="step-title-row"><span class="step-title">アフターフォロー</span></div>
+      <div class="step-photo">アフターフォローの様子</div>
+      <p class="step-body">頭の重さ、姿勢、背骨、骨盤の傾き、足の着き方が整った状態を体感していただきます。<br><br>施術後はお仕事中やご自宅などで気を付けることをアドバイスさせていただきます。<br><br>日常生活で頭痛の原因になってしまう動きや、クセがあるので、簡単に実践できるものからお伝えします。</p>
+    </div>
+  </div>
+
+  <div class="gold-banner">
+    一生、頭痛に悩まされない未来を<br>一緒に作っていきましょう！
+  </div>
+
+  <p class="flow-note">※初回は問診票のご記入時間がございますので、５分ほど早くご来店いただけましたら幸いです。</p>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="faq-title-box">
+    <p class="faq-title">よくある質問</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      <p class="faq-q-text">予約は必要ですか？</p>
+    </div>
+    <div class="faq-a">
+      <div class="faq-a-icon">A</div>
+      <p class="faq-a-text">はい、予約優先制となっていますので、事前にご連絡いただけますと幸いです。</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      <p class="faq-q-text">施術時間はどのくらいかかりますか？</p>
+    </div>
+    <div class="faq-a">
+      <div class="faq-a-icon">A</div>
+      <p class="faq-a-text">初回は、問診票記入・カウンセリングもございますので約45分頂いております。2回目以降は15分程度となっております。</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      <p class="faq-q-text">どんな服装で行けばいいですか？</p>
+    </div>
+    <div class="faq-a">
+      <div class="faq-a-icon">A</div>
+      <p class="faq-a-text">あらかじめ、ゆったりした服やジャージなど、動きやすい服装で来られる方がほとんどです。無料でお着替えもご用意しております。</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      <p class="faq-q-text">妊娠中・授乳中でも受けられますか？</p>
+    </div>
+    <div class="faq-a">
+      <div class="faq-a-icon">A</div>
+      <p class="faq-a-text">授乳中の方は問題ございませんが、妊娠中の方用の施術をご用意していますのでご予約の際にお伝えください。</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      <p class="faq-q-text">駐車場はありますか？</p>
+    </div>
+    <div class="faq-a">
+      <div class="faq-a-icon">A</div>
+      <p class="faq-a-text">はい。専用駐車場が3台分ございます。</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      <p class="faq-q-text">どのくらいの周期で施術を受ければいいですか？</p>
+    </div>
+    <div class="faq-a">
+      <div class="faq-a-icon">A</div>
+      <p class="faq-a-text">個人差がございますが、1週間に1回のペースで通っていただくことが多いです。※毎回、身体の状態を確認してご提案します。</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">
+      <div class="faq-q-icon">Q</div>
+      <p class="faq-q-text">支払い方法は？</p>
+    </div>
+    <div class="faq-a">
+      <div class="faq-a-icon">A</div>
+      <p class="faq-a-text">現金・クレジットカード・電子マネーでのお支払いが可能です。クレジットカードはVISA、JCB、MasterCard、Amex、Dinersがお使い頂けます。電子マネーはPayPay、楽天ペイ、auPAY、d払い、メルペイがお使い頂けます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLOSING CTA ===== -->
+<section class="closing">
+  <div class="closing-note">
+    「本当に自分に合うのかな…」と不安な方のために<br>
+    ただいま初回体験 2,980円キャンペーンをしております。<br><br>
+    表示されている残り枠はあくまで目安となりますので、予告なく終了する場合がございます。ご了承ください。<br><br>
+    <small>なお、このページは広告限定ページのため検索からは見つけることが出来ません。<br>
+    <strong>必ずこの機会にご予約をお済ませください。</strong></small>
+  </div>
+
+  <div class="boards-grid" style="margin-bottom:16px;">
+    <div class="board-card"><p class="board-text">身体のこわばりが一気に楽になりました。特に腰の痛み、首肩のこり、筋肉のハリ！！動的成も広がって、パワフルに動けそうです♡</p></div>
+    <div class="board-card"><p class="board-text">肩こりからくる頭痛と目の疲れがスッキリ。効果を実感し長年の辛さが改善され日々の生活が楽になりました。</p></div>
+    <div class="board-card"><p class="board-text">頭痛がひどくて具合が悪かった時にお世話になりました。施術後は首が軽くなり、呼吸も深くなって頭痛がなくなりました。ありがとうございます。</p></div>
+    <div class="board-card"><p class="board-text">頭痛スッキリ♪くいしばり軽減で顔もスッキリになりました。翌日もよくなりました♡いつもありがとうございます！</p></div>
+  </div>
+
+  <div class="gold-bar" style="border-radius:6px;margin:0 0 16px;">毎月 <span class="big">5</span> 名様限定</div>
+  <p class="deadline-text">8月31日まで 通常料金8,500円のところ</p>
+  <div class="price-block" style="margin:14px 0;">
+    <div class="price-main">
+      <span class="price-label">初回 限定</span>
+      <div class="price-num"><small>¥</small>2,980<small>円</small></div>
+      <p class="price-tax">（税込）</p>
+    </div>
+    <div class="off-badge">65%<br>OFF</div>
+  </div>
+  <p class="cta-note">\3分で予約完了/</p>
+  <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hp-btn">
+    <span class="hp-btn-b">B</span>
+    <span>
+      <span class="hp-btn-brand">HOT PEPPER Beauty</span><br>
+      <span class="hp-btn-label">予約する ▶</span>
+    </span>
+  </a>
+</section>
+
+<!-- ===== ACCESS ===== -->
+<section class="access">
+  <div class="access-logo-row">
+    <svg width="48" height="48" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="17" cy="25" r="14" fill="#e87000" opacity=".9"/>
+      <circle cx="33" cy="25" r="14" fill="#e87000" opacity=".9"/>
+      <path d="M25 13 Q18 20 18 28 Q18 34 25 37 Q32 34 32 28 Q32 20 25 13Z" fill="white" opacity=".6"/>
+    </svg>
+    <div>
+      <div style="font-size:10px;color:var(--orange);font-weight:700;letter-spacing:.12em;">AOYAMA Balance up Clinic</div>
+      <div style="font-size:15px;color:var(--orange);font-weight:700;">青山バランスアップ治療院</div>
+    </div>
+  </div>
+
+  <div class="access-clinic-photo">院外写真（AOYAMA看板）</div>
+
+  <div class="access-info">
+    <p>・秋田駅から車で4分、徒歩15分</p>
+    <p><span class="label">営業時間</span></p>
+    <p>月・金　7時〜13時　15時〜20時</p>
+    <p>火・木　15時〜21時</p>
+    <p>土・日　7時〜13時</p>
+    <p>休診日　水曜日</p>
+    <p>駐車場　3台</p>
+    <p>電話番号　018-838-0326</p>
+    <p>住所　秋田県秋田市手形字蛇野172-1</p>
+  </div>
+
+  <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="orange-btn">
+    ホットペッパーで予約する ▶
+  </a>
+</section>
+
+<!-- ===== HP BOOKING STEPS ===== -->
+<section class="hp-booking">
+  <div class="hp-box">
+    <div class="hp-box-header">ホットペッパーで予約する</div>
+    <div class="hp-box-body">
+      <p class="hp-box-sub">ホットペッパービューティーからかんたんにご予約いただけます。</p>
+
+      <div class="hp-step">
+        <div class="hp-step-num">1</div>
+        <div>
+          <h4>「予約する」ボタンをタップ</h4>
+          <p>ページ上部または画面下の「予約する」ボタンをタップします。</p>
+        </div>
+      </div>
+
+      <div class="hp-step">
+        <div class="hp-step-num">2</div>
+        <div>
+          <h4>クーポンページが開きます</h4>
+          <p>ホットペッパービューティーのクーポンページへ自動的に移動します。</p>
+        </div>
+      </div>
+
+      <div class="hp-step">
+        <div class="hp-step-num">3</div>
+        <div>
+          <h4>日時・メニューを選んで予約完了</h4>
+          <p>お好みの日時とメニューを選択し、予約を確定してください。</p>
+        </div>
+      </div>
+
+      <div class="phone-mockup">
+        📱 ホットペッパービューティー<br>クーポンページのイメージ
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p class="footer-name">青山バランスアップ治療院</p>
+  <div class="footer-info">
+    <p>秋田県秋田市手形字蛇野172-1</p>
+    <p>TEL：018-838-0326</p>
+  </div>
+  <div class="footer-links">
+    <a href="#">プライバシーポリシー</a> ／ <a href="#">免責事項</a>
+  </div>
+  <p style="font-size:11px;color:var(--light);margin-top:12px;">© 青山バランスアップ治療院 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
