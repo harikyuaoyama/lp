@@ -37,116 +37,23 @@ body{padding-bottom:84px;}
 
 @keyframes hpb-spread {
   0%   { transform: translateX(-50%) scaleX(0.82);
-         filter: drop-shadow(0 2px 6px rgba(191,19,80,0.20)); }
+         filter: drop-shadow(0 2px 6px rgba(200,24,94,0.20)); }
   50%  { transform: translateX(-50%) scaleX(1.00);
-         filter: drop-shadow(0 5px 18px rgba(191,19,80,0.52)); }
+         filter: drop-shadow(0 5px 18px rgba(200,24,94,0.52)); }
   100% { transform: translateX(-50%) scaleX(0.82);
-         filter: drop-shadow(0 2px 6px rgba(191,19,80,0.20)); }
+         filter: drop-shadow(0 2px 6px rgba(200,24,94,0.20)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .sticky-wrap { animation: none; transform: translateX(-50%); }
 }
 
-/* バナー本体 */
-.hpb-btn {
-  display: flex;
-  align-items: stretch;
-  height: 58px;
-  background: #fff;
-  border: 2.5px solid #bf1350;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* 左：ロゴエリア */
-.hpb-logo {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 0 12px 0 14px;
-  background: #fff;
-  flex-shrink: 0;
-}
-
-/* B マーク */
-.hpb-badge {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2px solid #bf1350;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.hpb-badge-b {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 22px;
-  font-weight: 700;
-  font-style: italic;
-  color: #bf1350;
-  line-height: 1;
-  margin-top: -1px;
-}
-
-/* テキスト "HOT PEPPER / Beauty" */
-.hpb-name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1px;
-}
-.hpb-hotpepper {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 7.5px;
-  font-weight: 700;
-  letter-spacing: 0.10em;
-  color: #bf1350;
-  text-transform: uppercase;
-  line-height: 1;
-}
-.hpb-beauty {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 17px;
-  font-weight: 400;
-  font-style: italic;
-  color: #bf1350;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-}
-
-/* 区切り線 */
-.hpb-sep {
-  width: 1.5px;
-  background: #e8a0bc;
-  margin: 10px 0;
-  flex-shrink: 0;
-}
-
-/* 右：予約するテキスト */
-.hpb-action {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff8fb;
-  gap: 6px;
-}
-.hpb-action-text {
-  font-family: 'Hiragino Sans', 'Noto Sans JP', 'Meiryo', sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  color: #1a1a1a;
-  letter-spacing: 0.06em;
-  line-height: 1;
-}
-.hpb-arrow {
-  font-size: 14px;
-  color: #bf1350;
-  font-weight: 900;
-  line-height: 1;
-  margin-top: 1px;
+/* SVGをフル幅で表示 */
+.sticky-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 </style>
 </head>
@@ -160,30 +67,52 @@ body{padding-bottom:84px;}
   <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hotspot hs-4" aria-label="ホットペッパービューティーで予約する"></a>
 </div>
 
+<!-- HP Beauty バナーボタン（SVGインライン）-->
 <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/"
    target="_blank"
    class="sticky-wrap"
    aria-label="ホットペッパービューティーで予約する">
-  <div class="hpb-btn">
-    <!-- ロゴ -->
-    <div class="hpb-logo">
-      <div class="hpb-badge">
-        <span class="hpb-badge-b">B</span>
-      </div>
-      <div class="hpb-name">
-        <span class="hpb-hotpepper">HOT PEPPER</span>
-        <span class="hpb-beauty">Beauty</span>
-      </div>
-    </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 58" role="img" aria-label="HOT PEPPER Beauty 予約する">
+    <!-- 外枠 -->
+    <rect width="440" height="58" rx="8" ry="8"
+          fill="white" stroke="#c8185e" stroke-width="2.5"/>
+    <!-- 右エリア薄ピンク -->
+    <rect x="168" y="2.5" width="269.5" height="53"
+          fill="#fff5f8" rx="0"/>
+    <!-- 右角丸（右側のみ） -->
+    <rect x="432" y="2.5" width="5.5" height="53" fill="#fff5f8"/>
+    <!-- 区切り縦線 -->
+    <line x1="168" y1="11" x2="168" y2="47"
+          stroke="#e8b0c8" stroke-width="1.5"/>
 
-    <div class="hpb-sep"></div>
+    <!-- B バッジ：円 -->
+    <circle cx="43" cy="29" r="19.5" fill="white" stroke="#c8185e" stroke-width="2"/>
+    <!-- B 文字（HP Beautyスタイル：太字イタリックセリフ） -->
+    <text x="43.5" y="37.5"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="25" font-weight="700" font-style="italic"
+          fill="#c8185e" text-anchor="middle"
+          dominant-baseline="auto">B</text>
 
-    <!-- アクション -->
-    <div class="hpb-action">
-      <span class="hpb-action-text">予約する</span>
-      <span class="hpb-arrow">▶</span>
-    </div>
-  </div>
+    <!-- HOT PEPPER （超小） -->
+    <text x="76" y="22"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="7.5" font-weight="700"
+          letter-spacing="1.3" fill="#c8185e">HOT PEPPER</text>
+
+    <!-- Beauty （大きめイタリックセリフ） -->
+    <text x="74" y="41"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="21" font-style="italic"
+          fill="#c8185e" letter-spacing="0.8">Beauty</text>
+
+    <!-- 予約する ▶ -->
+    <text x="307" y="35.5"
+          font-family="'Hiragino Sans', 'Noto Sans JP', 'Meiryo', sans-serif"
+          font-size="17" font-weight="800"
+          fill="#1a1a1a" text-anchor="middle"
+          letter-spacing="1.5">予約する ▶</text>
+  </svg>
 </a>
 
 </body>
