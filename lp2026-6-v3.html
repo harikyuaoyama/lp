@@ -7,23 +7,146 @@
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html,body{background:#f0ede8;}
-body{padding-bottom:70px;}
+body{padding-bottom:84px;}
+
+/* LP 画像ラッパー */
 .lp-wrap{max-width:480px;margin:0 auto;position:relative;overflow:hidden;}
 .lp-img{width:100%;display:block;}
+
 /* 画像内のHP予約ボタン位置にクリッカブルエリアを設置 */
-/* 画像の高さ19300pxに対する % で位置指定 */
 .hotspot{position:absolute;left:5%;width:90%;background:transparent;cursor:pointer;text-decoration:none;display:block;}
-.hs-1{top:15.9%;height:2.3%;}  /* hero下部のHP Beautyボタン */
-.hs-2{top:31.8%;height:2.3%;}  /* 2回目のHP Beautyボタン */
-.hs-3{top:52.4%;height:2.3%;}  /* guarantee後のHP Beautyボタン */
-.hs-4{top:74.9%;height:2.3%;}  /* closing CTAのHP Beautyボタン */
-/* スティッキー下部CTA */
-.sticky-cta{
-  position:fixed;bottom:0;left:50%;transform:translateX(-50%);
-  width:100%;max-width:480px;background:#9b1054;color:white;
-  text-align:center;padding:16px 20px;font-size:17px;font-weight:700;
-  letter-spacing:.04em;z-index:1000;text-decoration:none;display:block;
-  font-family:'Noto Sans JP',sans-serif;
+.hs-1{top:15.9%;height:2.3%;}
+.hs-2{top:31.8%;height:2.3%;}
+.hs-3{top:52.4%;height:2.3%;}
+.hs-4{top:74.9%;height:2.3%;}
+
+/* ── スティッキー下部 HP Beauty バナー ── */
+.sticky-wrap {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  width: calc(100% - 28px);
+  max-width: 452px;
+  z-index: 1000;
+  text-decoration: none;
+  display: block;
+  transform-origin: 50% 100%;
+  animation: hpb-spread 2.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform, filter;
+}
+
+@keyframes hpb-spread {
+  0%   { transform: translateX(-50%) scaleX(0.82);
+         filter: drop-shadow(0 2px 6px rgba(191,19,80,0.20)); }
+  50%  { transform: translateX(-50%) scaleX(1.00);
+         filter: drop-shadow(0 5px 18px rgba(191,19,80,0.52)); }
+  100% { transform: translateX(-50%) scaleX(0.82);
+         filter: drop-shadow(0 2px 6px rgba(191,19,80,0.20)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-wrap { animation: none; transform: translateX(-50%); }
+}
+
+/* バナー本体 */
+.hpb-btn {
+  display: flex;
+  align-items: stretch;
+  height: 58px;
+  background: #fff;
+  border: 2.5px solid #bf1350;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 左：ロゴエリア */
+.hpb-logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 12px 0 14px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+/* B マーク */
+.hpb-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #bf1350;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hpb-badge-b {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
+  color: #bf1350;
+  line-height: 1;
+  margin-top: -1px;
+}
+
+/* テキスト "HOT PEPPER / Beauty" */
+.hpb-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+.hpb-hotpepper {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  color: #bf1350;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.hpb-beauty {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: italic;
+  color: #bf1350;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+/* 区切り線 */
+.hpb-sep {
+  width: 1.5px;
+  background: #e8a0bc;
+  margin: 10px 0;
+  flex-shrink: 0;
+}
+
+/* 右：予約するテキスト */
+.hpb-action {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff8fb;
+  gap: 6px;
+}
+.hpb-action-text {
+  font-family: 'Hiragino Sans', 'Noto Sans JP', 'Meiryo', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+.hpb-arrow {
+  font-size: 14px;
+  color: #bf1350;
+  font-weight: 900;
+  line-height: 1;
+  margin-top: 1px;
 }
 </style>
 </head>
@@ -31,15 +154,36 @@ body{padding-bottom:70px;}
 
 <div class="lp-wrap">
   <img src="canva_lp.jpg" class="lp-img" alt="青山バランスアップ治療院 頭痛施術専門整体LP">
-  <!-- クリッカブルホットスポット -->
   <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hotspot hs-1" aria-label="ホットペッパービューティーで予約する"></a>
   <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hotspot hs-2" aria-label="ホットペッパービューティーで予約する"></a>
   <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hotspot hs-3" aria-label="ホットペッパービューティーで予約する"></a>
   <a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="hotspot hs-4" aria-label="ホットペッパービューティーで予約する"></a>
 </div>
 
-<a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/" target="_blank" class="sticky-cta">
-  HOT PEPPER Beauty で予約する ▶
+<a href="https://beauty.hotpepper.jp/kr/slnH000772562/coupon/CT01/"
+   target="_blank"
+   class="sticky-wrap"
+   aria-label="ホットペッパービューティーで予約する">
+  <div class="hpb-btn">
+    <!-- ロゴ -->
+    <div class="hpb-logo">
+      <div class="hpb-badge">
+        <span class="hpb-badge-b">B</span>
+      </div>
+      <div class="hpb-name">
+        <span class="hpb-hotpepper">HOT PEPPER</span>
+        <span class="hpb-beauty">Beauty</span>
+      </div>
+    </div>
+
+    <div class="hpb-sep"></div>
+
+    <!-- アクション -->
+    <div class="hpb-action">
+      <span class="hpb-action-text">予約する</span>
+      <span class="hpb-arrow">▶</span>
+    </div>
+  </div>
 </a>
 
 </body>
