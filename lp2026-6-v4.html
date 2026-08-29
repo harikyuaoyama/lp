@@ -9,8 +9,8 @@
 html,body{background:#faf1cb;}
 body{padding-bottom:78px;}
 
-/* LP 画像ラッパー：横幅ギリギリ・左右余白ゼロ */
-.lp-wrap{max-width:500px;margin:0 auto;position:relative;overflow:hidden;line-height:0;}
+/* LP 画像ラッパー：全幅・左右余白ゼロ（画像の元幅1025pxまで拡大、それ以上は拡大せず中央） */
+.lp-wrap{width:100%;max-width:1025px;margin:0 auto;position:relative;overflow:hidden;line-height:0;}
 .lp-img{width:100%;display:block;}
 
 /* 画像内「予約する」ボタン位置の透明クリックエリア */
@@ -25,7 +25,7 @@ body{padding-bottom:78px;}
   bottom:10px;
   left:50%;
   width:calc(100% - 24px);
-  max-width:470px;
+  max-width:566px;
   z-index:1000;
   text-decoration:none;
   display:block;
